@@ -1,15 +1,11 @@
 import "./About.css";
 import { Link } from "react-router-dom";
 
-<Link to="/about">
-  <button variant="outlined">Sign up</button>
-</Link>;
-
 function About() {
   return (
-    <div className="About">
-      <header className="About-header"></header>
-      <p>About Page</p>
+    <div>
+      <h1>About Us</h1>
+      <p>This is the about page.</p>
     </div>
   );
 }

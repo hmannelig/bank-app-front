@@ -13,6 +13,7 @@ import Main from "./components/Main";
 import About from "./components/pages/about/About";
 import Bank from "./components/pages/bank/Bank";
 import Login from "./components/pages/login/Login";
+import Home from "./components/pages/home/Home";
 
 function App() {
   return (
@@ -21,6 +22,9 @@ function App() {
         <h2>Select option</h2>
         <BrowserRouter>
           <nav>
+            <li>
+              <Link to="/home">Home</Link>
+            </li>
             <li>
               <Link to="/about">About</Link>
             </li>
@@ -32,6 +36,7 @@ function App() {
             </li>
           </nav>
           <Routes>
+            <Route path="/home" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/bank" element={<Bank />} />
             <Route path="/login" element={<Login />} />

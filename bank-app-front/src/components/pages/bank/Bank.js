@@ -2,9 +2,9 @@ import "./Bank.css";
 
 function Bank() {
   return (
-    <div className="Bank">
-      <header className="Bank-header"></header>
-      <p>Bank Page</p>
+    <div>
+      <h1>Bank Details</h1>
+      <p>This page corresponds to your bank details.</p>
     </div>
   );
 }
