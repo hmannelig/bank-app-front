@@ -17,7 +17,7 @@ function Login() {
   const handleFormSubmit = (event) => {
     event.preventDefault();
     console.log(`Username: ${username}, Password: ${password}`);
-    // Add your login logic here
+    // Add login logic here
   };
 
   return (
