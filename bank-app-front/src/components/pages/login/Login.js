@@ -23,20 +23,28 @@ function Login() {
   return (
     <div>
       <h1>Enter your details to login.</h1>
-      <form onSubmit={handleFormSubmit}>
-        <label>
+      <form onSubmit={handleFormSubmit} className="login-form">
+        <label className="form-label">
           Username:
-          <input type="text" value={username} onChange={handleUsernameChange} />
+          <input
+            type="text"
+            value={username}
+            onChange={handleUsernameChange}
+            className="form-input"
+          />
         </label>
-        <label>
+        <label className="form-label">
           Password:
           <input
             type="password"
             value={password}
             onChange={handlePasswordChange}
+            className="form-input"
           />
         </label>
-        <button type="submit">Log In</button>
+        <button type="submit" className="form-button">
+          Log In
+        </button>
       </form>
     </div>
   );
