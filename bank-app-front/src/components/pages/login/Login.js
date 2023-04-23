@@ -14,7 +14,7 @@ function Login() {
     setPassword(event.target.value);
   };
 
-  const handleFormSubmit = (event) => {
+  const handleSubmit = (event) => {
     event.preventDefault();
     console.log(`Username: ${username}, Password: ${password}`);
     // Add login logic here
@@ -22,30 +22,30 @@ function Login() {
 
   return (
     <div>
-      <h1>Enter your details to login.</h1>
-      <form onSubmit={handleFormSubmit} className="login-form">
-        <label className="form-label">
-          Username:
-          <input
-            type="text"
-            value={username}
-            onChange={handleUsernameChange}
-            className="form-input"
-          />
-        </label>
-        <label className="form-label">
-          Password:
-          <input
-            type="password"
-            value={password}
-            onChange={handlePasswordChange}
-            className="form-input"
-          />
-        </label>
-        <button type="submit" className="form-button">
-          Log In
-        </button>
-      </form>
+      <h2>Enter your details to login</h2>
+      <div className="login-container">
+        <form onSubmit={handleSubmit} className="login-form">
+          <div className="login-input">
+            <label htmlFor="username">Username:</label>
+            <input
+              type="text"
+              value={username}
+              onChange={handleUsernameChange}
+            />
+          </div>
+          <div className="login-input">
+            <label htmlFor="password">Password:</label>
+            <input
+              type="password"
+              value={password}
+              onChange={handlePasswordChange}
+            />
+          </div>
+          <button type="submit" className="form-button">
+            Log In
+          </button>
+        </form>
+      </div>
     </div>
   );
 }
