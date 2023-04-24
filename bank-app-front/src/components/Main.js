@@ -39,6 +39,7 @@ function Main() {
           </li>
         </ul>
       </nav>
+
       <Routes>
         <Route path="/home" element={<Home />} />
         <Route path="/login" element={<Login />} />

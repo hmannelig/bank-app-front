@@ -1,4 +1,5 @@
 import "./Login.css";
+import { handleLogin } from "../../../services/loginServiceApi";
 
 import React, { useState } from "react";
 
@@ -16,8 +17,15 @@ function Login() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log(`Username: ${username}, Password: ${password}`);
+
     // Add login logic here
+    handleLogin(`${username}`, `${password}`)
+      .then((data) => {
+        console.log(data);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   };
 
   return (

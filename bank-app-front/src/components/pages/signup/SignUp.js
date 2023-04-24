@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./SignUp.css";
+import { signUpUser } from "../../../services/signUpServiceApi";
 
 function SignUp() {
   const [name, setName] = useState("");
@@ -25,11 +26,19 @@ function SignUp() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log("Name:", name);
-    console.log("Surname:", surname);
-    console.log("Email:", email);
-    console.log("Password:", password);
+    // console.log("Name:", name);
+    // console.log("Surname:", surname);
+    // console.log("Email:", email);
+    // console.log("Password:", password);
+
     // add logic to handle the sign-up process here
+    signUpUser(name, surname, email, password)
+      .then((data) => {
+        console.log(data);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   };
 
   return (
