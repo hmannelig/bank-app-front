@@ -1,4 +1,4 @@
-import "./Login.css";
+import "./auth.css";
 import { handleLogin } from "../../../services/loginServiceApi";
 
 import React, { useState } from "react";
@@ -31,9 +31,9 @@ function Login() {
   return (
     <div>
       <h2>Enter your details to login</h2>
-      <div className="login-container">
-        <form onSubmit={handleSubmit} className="login-form">
-          <div className="login-input">
+      <div className="auth-container">
+        <form onSubmit={handleSubmit} className="auth-form">
+          <div className="auth-input">
             <label htmlFor="username">Username:</label>
             <input
               type="text"
@@ -41,7 +41,7 @@ function Login() {
               onChange={handleUsernameChange}
             />
           </div>
-          <div className="login-input">
+          <div className="auth-input">
             <label htmlFor="password">Password:</label>
             <input
               type="password"
@@ -49,7 +49,7 @@ function Login() {
               onChange={handlePasswordChange}
             />
           </div>
-          <button type="submit" className="form-button">
+          <button type="submit" className="auth-button">
             Log In
           </button>
         </form>

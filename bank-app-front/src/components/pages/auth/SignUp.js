@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./SignUp.css";
+import "./auth.css";
 import { signUpUser } from "../../../services/signUpServiceApi";
 
 function SignUp() {
@@ -44,9 +44,9 @@ function SignUp() {
   return (
     <div>
       <h2>Sign Up</h2>
-      <div className="signup-container">
-        <form onSubmit={handleSubmit} className="signup-form">
-          <div className="signup-input">
+      <div className="auth-container">
+        <form onSubmit={handleSubmit} className="auth-form">
+          <div className="auth-input">
             <label htmlFor="name">Name:</label>
             <input
               type="text"
@@ -56,7 +56,7 @@ function SignUp() {
               onChange={handleNameChange}
             />
           </div>
-          <div className="signup-input">
+          <div className="auth-input">
             <label htmlFor="surname">Surname:</label>
             <input
               type="text"
@@ -66,7 +66,7 @@ function SignUp() {
               onChange={handleSurnameChange}
             />
           </div>
-          <div className="signup-input">
+          <div className="auth-input">
             <label htmlFor="email">Email:</label>
             <input
               type="email"
@@ -76,7 +76,7 @@ function SignUp() {
               onChange={handleEmailChange}
             />
           </div>
-          <div className="signup-input">
+          <div className="auth-input">
             <label htmlFor="password">Password:</label>
             <input
               type="password"
@@ -86,7 +86,7 @@ function SignUp() {
               onChange={handlePasswordChange}
             />
           </div>
-          <button type="submit" className="signup-button">
+          <button type="submit" className="auth-button">
             Sign Up
           </button>
         </form>
